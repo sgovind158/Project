@@ -1,0 +1,102 @@
+#mainBox {
+  width: 60%;
+  height: 31rem;
+  /* border: 1px solid black; */
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  margin-top: 50px;
+  /* background-image: linear-gradient(wheat,white); */
+  position: relative;
+  align-items: center;
+  animation-name: mainDiv;
+  animation-duration: 4s;
+  animation-iteration-count: 100;
+}
+@keyframes mainDiv {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+#mainBox > div:nth-child(1) {
+  /* border: 1px  solid black; */
+  width: 600px;
+  height: 50px;
+}
+#mainBox > div:nth-child(1) {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+}
+
+#mainBox > div:nth-child(2) {
+  position: absolute;
+  left: 100px;
+  top: 200px;
+}
+
+input {
+  width: 60%;
+  height: 95%;
+  border-radius: 30px;
+  font-size: 25px;
+  font-weight: bold;
+}
+button {
+  background-color: aliceblue;
+  border-radius: 25px;
+  width: 30%;
+  height: 95%;
+  font-weight: bold;
+  color: green;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+button:active {
+  background-color: green;
+  color: rebeccapurple;
+}
+
+#mainBox > div:nth-child(2) {
+  width: 600px;
+  height: 100px;
+  /* border: 1px solid black; */
+  margin-left: 30px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  font-weight: bold;
+  font-size: 20px;
+  animation-name: output;
+  animation-duration: 4s;
+  animation-iteration-count: 100;
+}
+
+@keyframes output {
+  from {
+    background-color: yellow;
+  }
+  to {
+    background-color: palevioletred;
+  }
+}
+
+#mainBox > div:nth-child(2):hover {
+  background-color: greenyellow;
+  background-image: linear-gradient(to right, yellow, red);
+}
+
+#mainBox > div:nth-child(2):active {
+  background-image: linear-gradient(to right, red, yellow);
+}
+h1 {
+  margin-top: -0px;
+}
+h1::first-letter {
+  font-size: 85px;
+  color: purple;
+}
