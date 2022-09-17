@@ -1,0 +1,48 @@
+let {log} = console
+
+// using stack  we are using stack array so this is our extra space so that why our S.C O(n) and we are iterate n time so our  T.C O(n)
+let s = "[()]{}{[()()]()}";
+let n = s.length;
+let stack = []; // extra space 
+
+if(n % 2==1){
+    return false;
+}
+
+for(let i = 0; i<n;i++){ // iterate n time 
+    
+    if(s[i]=="("||s[i]=="{"||s[i]=="["){
+        stack.push(s[i])
+    }else{
+        let value = pair(s[i])
+        
+        if(value == stack[stack.length - 1]){
+            stack.pop()
+        }else{
+            return false
+        }
+    }
+    
+   
+}
+
+ if(stack.length == 0){
+        log(true)
+    }else{
+        log(false)
+    }
+
+
+function pair(value){
+    if(value == ")"){
+        return "("
+    }
+    
+     if(value == "}"){
+        return "{"
+    }
+    
+     if(value == "]"){
+        return "["
+    }
+}
