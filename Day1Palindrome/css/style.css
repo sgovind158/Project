@@ -73,7 +73,7 @@ button:active {
   font-size: 20px;
   animation-name: output;
   animation-duration: 4s;
-  animation-iteration-count: 100;
+  animation-iteration-count: 1000000;
 }
 
 @keyframes output {

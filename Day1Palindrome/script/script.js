@@ -11,6 +11,9 @@
  
 
    let bool = true;
+   if(str1 == ""){
+    bool = false
+   }
    for (let i = 0; i < n; i++) {
      if (str1[i] != str1[str1.length - i - 1]) {
        bool = false;
@@ -18,7 +21,7 @@
      }
    }
 
-   if (bool) {
+   if (bool ) {
     showResult.innerHTML = ` Yes this is &#129321; palindrome `
    } else {
        showResult.innerHTML = ` No this is not &#128542; palindrome `
