@@ -1,27 +1,31 @@
-const express = require('express')
-const path = require("path");
 
-const app = express();
-const publicPath = path.join(__dirname,"public");
+const express = require("express")
 
-
-// app.use(express.static(publicPath));
+const app = express()
 app.get("/",(req,res)=>{
-
-    res.sendFile(`${publicPath}/index.html`)
-
+res.send("hello this is my home page and html render page")
 })
+
+
+
 
 app.get("/about",(req,res)=>{
+    res.send("hello this is my about page and html render page")
+    })
 
-    res.sendFile(`${publicPath}/about.html`)
+    app.get("/detail",(req,res)=>{
+        res.send("hello this is my detail page")
+        })
 
-})
+        app.get("/login",(req,res)=>{
+            res.send("hello this is my login page")
+            })
 
-app.get("*",(req,res)=>{
+            app.get("/logout",(req,res)=>{
+                res.send("hello this is my logout page")
+                })
 
-    res.sendFile(`${publicPath}/nopage.html`)
-
-})
-
-app.listen(6000)
+                app.get("*",(req,res)=>{
+                    res.send("page not found page")
+                    })
+app.listen(5000)
