@@ -1,0 +1,60 @@
+.addProductDiv{
+    width: 50%;
+   height: 400px;
+   border: 1px solid black;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   margin: auto;
+   margin-top: 20px;
+   border-radius: 30px;
+}
+
+.addProductDiv>:nth-child(n){
+    display: block;
+  
+}
+
+.addProductDiv>:nth-child(1){
+    /* background-color: black; */
+    text-align: center;
+  
+  
+
+}
+
+.addInput{
+    /* background-color: black; */
+    /* text-align: center; */
+    margin: auto;
+    width: 80%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 25px;
+   
+}
+
+.addInvalid{
+    /* background-color: black; */
+    margin: auto;
+    width: 80%;
+    /* height: 40px; */
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    font-size: 15px;
+    /* margin-top: 10px; */
+    color: red;
+}
+
+
+.button{
+    /* background-color: black; */
+    margin: auto;
+    width: 80%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 25px;
+    background-color: skyblue;
+    margin-top: 10px;
+    
+}

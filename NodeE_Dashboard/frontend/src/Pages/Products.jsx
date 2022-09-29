@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import prod from "./StylePages/products.module.css"
 // get data or table 
 
@@ -47,6 +48,7 @@ console.log(data)
         <h1>Category</h1>
         <h1>Price</h1>
         <h1>Delete</h1>
+        <h1>Update</h1>
        
        </div>
 
@@ -61,6 +63,7 @@ console.log(data)
         <p>{el.category}</p>
         <p>$ {el.price}</p>
         <p><button onClick = {()=>handleDeleteFun(el._id)}>Delete</button></p>
+       <p> <Link to={`/update/${el._id}`}><button>Update</button></Link></p>
        
         </div>
         )

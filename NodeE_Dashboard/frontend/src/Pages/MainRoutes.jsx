@@ -18,7 +18,7 @@ const MainRoutes = () => {
       <Route  path="/add"  element={ <AddProduct />} />
       <Route  path="/products"element={  <Products />} />
       <Route path="/profile" element={<Profile /> } />
-      <Route path="/update" element={<UpdateProduct />} />
+      <Route path="/update/:id" element={<UpdateProduct />} />
       </Route>
 
   {/* {auth? <Route path="/logout" element={ <Logout /> }/>: <Route path="/signup" element={<SignUp />} />}
