@@ -13,49 +13,20 @@ const MainRoutes = () => {
     const auth = localStorage.getItem("user")
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
-          <ReqAuth>
-            <Home />
-          </ReqAuth>
-        }
-      />
-      <Route
-        path="/add"
-        element={
-          <ReqAuth>
-            <AddProduct />
-          </ReqAuth>
-        }
-      />
-     
-      <Route
-        path="/products"
-        element={
-          <ReqAuth>
-            <Products />
-          </ReqAuth>
-        }
-      />
-      <Route
-        path="/profile"
-        element={
-          <ReqAuth>
-            <Profile />
-          </ReqAuth>
-        }
-      />
-     
+      <Route element={<ReqAuth/>}>
+      <Route  path="/" element={  <Home /> } />
+      <Route  path="/add"  element={ <AddProduct />} />
+      <Route  path="/products"element={  <Products />} />
+      <Route path="/profile" element={<Profile /> } />
+      <Route path="/update" element={<UpdateProduct />} />
+      </Route>
 
-      {auth? <Route path="/logout" element={
-          <ReqAuth>
-            <Logout />
-          </ReqAuth>
-        }/>: <Route path="/signup" element={<SignUp />} />}
+  {/* {auth? <Route path="/logout" element={ <Logout /> }/>: <Route path="/signup" element={<SignUp />} />}
+     */}
+
      
-     <Route path="/update" element={<UpdateProduct />} />
      <Route path="/login" element={<Login/>} />
+     <Route path="/signup" element={<SignUp/>} />
     </Routes>
   );
 };

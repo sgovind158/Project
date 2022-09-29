@@ -18,8 +18,13 @@ const Navbar = () => {
         <Link to='/products'>Products</Link>
         <Link to='/profile'>Profile</Link>
         <Link to='/update' >UpdateProduct</Link>
+       
+        {auth?<Link to='/signup' onClick={logout} >Logout</Link>:
+        <>
+        <Link to='/signup' >SignUp</Link>
         <Link to='/login' >Login</Link>
-        {auth?<Link to='/signup' onClick={logout} >Logout</Link>:<Link to='/signup' >SignUp</Link>}
+        </>
+        }
         
         
     </div>

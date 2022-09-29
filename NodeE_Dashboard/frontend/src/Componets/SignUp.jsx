@@ -14,7 +14,7 @@ const SignUp = () => {
             navigate("/")
         }
 
-    },[])
+    },[navigate])
 
     const signUpFun = async()=>{
 console.log(name,email,password)

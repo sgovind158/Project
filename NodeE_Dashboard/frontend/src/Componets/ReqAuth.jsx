@@ -1,12 +1,12 @@
 
-import {  useNavigate } from 'react-router-dom'
+import {  useNavigate ,Outlet } from 'react-router-dom'
 
 const ReqAuth = ({children}) => {
     const navigate = useNavigate()
     const auth = localStorage.getItem("user")
  
    if(auth){
-    return children
+    return <Outlet/>
    }else{
     return navigate("/signup")
    }
