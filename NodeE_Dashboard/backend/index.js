@@ -88,4 +88,21 @@ app.post("/addProduct", async (req, res) => {
             res.send(result)
         
   })
+
+
+  app.get("/search/:key",async(req,res)=>{
+   
+    let result = await productModel.find(
+        {"$or":[
+            {name:{$regex:req.params.key}},
+            {category:{$regex:req.params.key}},
+            {brand:{$regex:req.params.key}}
+        ]}
+        )
+   if(result){
+   res.send(result)
+   }else{
+    res.send({result:"Product not found"})
+   }
+  })
 app.listen(5000);
