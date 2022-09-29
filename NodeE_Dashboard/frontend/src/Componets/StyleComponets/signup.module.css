@@ -1,0 +1,69 @@
+.signDiv{
+    width: 50%;
+   height: 300px;
+   border: 1px solid black;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   margin: auto;
+   margin-top: 50px;
+   border-radius: 30px;
+}
+
+.signDiv>:nth-child(n){
+    display: block;
+  
+}
+
+.signDiv>:nth-child(1){
+    /* background-color: black; */
+    text-align: center;
+  
+  
+
+}
+
+.signDiv>:nth-child(2){
+    /* background-color: black; */
+    /* text-align: center; */
+    margin: auto;
+    width: 80%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 25px;
+   
+}
+
+.signDiv>:nth-child(3){
+    /* background-color: black; */
+    margin: auto;
+    width: 80%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.signDiv>:nth-child(4){
+    /* background-color: black; */
+    margin: auto;
+    width: 80%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.signDiv>:nth-child(5){
+    /* background-color: black; */
+    margin: auto;
+    width: 80%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 25px;
+    background-color: skyblue;
+    margin-top: 10px;
+    
+}
