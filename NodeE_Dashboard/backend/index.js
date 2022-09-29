@@ -7,6 +7,7 @@ const express = require("express");
 const cors = require("cors");
 require("./db/config");
 const UsersModel = require("./db/user");
+const productModel = require("./db/product");
 const app = express();
 
 app.use(express.json());
@@ -27,12 +28,22 @@ app.post("/login", async (req, res) => {
 
     if (user) {
       res.send(user);
+    //   console.log("user found",user)
     } else {
-      res.send("user not found ");
+        // console.log("user not found ",user)
+      res.send({"notFount":"user is not found"});
     }
   } else {
-    res.send("user not found please fill all detail ");
+    res.send({"notFount":"please fill all input "});
   }
 });
+
+
+app.post("/addProduct", async (req, res) => {
+    let data = new productModel(req.body);
+    let result = await data.save();
+ 
+    res.send(result);
+  });
 
 app.listen(5000);
