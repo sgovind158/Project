@@ -58,4 +58,13 @@ app.post("/addProduct", async (req, res) => {
     }
 
   })
+
+  // delete product 
+  app.delete("/product/:id",async(req,res)=>{
+
+    let result = await productModel.deleteOne({_id:req.params.id})
+  
+     res.send(result)
+  })
+  
 app.listen(5000);
