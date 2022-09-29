@@ -21,12 +21,12 @@ const fileName = `${dirPath}/apple.txt`
 // })
 
 // rename file
-fs.rename(fileName,`${dirPath}/orange.txt`,(err)=>{
-    if(!err){
-             console.log("file  is rename  ")
-             }
-})
+// fs.rename(fileName,`${dirPath}/orange.txt`,(err)=>{
+//     if(!err){
+//              console.log("file  is rename  ")
+//              }
+// })
 
 // delete 
 
-fs.unlinkSync(`${dirPath}/orange.txt`)
+// fs.unlinkSync(`${dirPath}/orange.txt`)

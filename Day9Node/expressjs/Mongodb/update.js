@@ -1,5 +1,5 @@
 const dbConnect = require("./mongodb")
-// updateOne and for many update
+// updateOne and for updatemany update
 const updateFun = async()=>{
     let data =  await dbConnect()
     let result = await data.updateOne(
