@@ -1,0 +1,60 @@
+.loginDiv{
+    width: 50%;
+   height: 300px;
+   border: 1px solid black;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   margin: auto;
+   margin-top: 50px;
+   border-radius: 30px;
+}
+
+.loginDiv>:nth-child(n){
+    display: block;
+  
+}
+
+.loginDiv>:nth-child(1){
+    /* background-color: black; */
+    text-align: center;
+  
+  
+
+}
+
+.loginDiv>:nth-child(2){
+    /* background-color: black; */
+    /* text-align: center; */
+    margin: auto;
+    width: 80%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 25px;
+   
+}
+
+.loginDiv>:nth-child(3){
+    /* background-color: black; */
+    margin: auto;
+    width: 80%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+
+
+.loginDiv>:nth-child(4){
+    /* background-color: black; */
+    margin: auto;
+    width: 80%;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 25px;
+    background-color: skyblue;
+    margin-top: 10px;
+    
+}

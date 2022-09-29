@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import Login from "../Componets/Login";
 import ReqAuth from "../Componets/ReqAuth";
 import SignUp from "../Componets/SignUp";
 import AddProduct from "./AddProduct";
@@ -45,7 +46,7 @@ const MainRoutes = () => {
           </ReqAuth>
         }
       />
-      <Route path="/update" element={<UpdateProduct />} />
+     
 
       {auth? <Route path="/logout" element={
           <ReqAuth>
@@ -53,7 +54,8 @@ const MainRoutes = () => {
           </ReqAuth>
         }/>: <Route path="/signup" element={<SignUp />} />}
      
-     
+     <Route path="/update" element={<UpdateProduct />} />
+     <Route path="/login" element={<Login/>} />
     </Routes>
   );
 };
