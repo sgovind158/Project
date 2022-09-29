@@ -9,7 +9,8 @@ require("./db/config");
 const UsersModel = require("./db/user");
 const productModel = require("./db/product");
 const app = express();
-
+let jwt = require('jsonwebtoken');
+let jwtKey = "e-comm"
 app.use(express.json());
 app.use(cors());
 
@@ -18,7 +19,15 @@ app.post("/signup", async (req, res) => {
   let result = await data.save();
  result = result.toObject();
   delete result.password  //  only come email and name not password 
-  res.send(result);
+
+  jwt.sign({result},jwtKey,(err,token)=>{
+    if(err){
+        res.send({res:"user is not found"});  
+    }
+
+    res.send({result,auth:token})
+})
+ 
 });
 
 app.post("/login", async (req, res) => {
@@ -27,8 +36,14 @@ app.post("/login", async (req, res) => {
     let user = await UsersModel.findOne(req.body).select("-password");
 
     if (user) {
-      res.send(user);
-    //   console.log("user found",user)
+     
+    jwt.sign({user},jwtKey,(err,token)=>{
+        if(err){
+            res.send({result:"user is not found"});  
+        }
+
+        res.send({user,auth:token})
+    })
     } else {
         // console.log("user not found ",user)
       res.send({"notFount":"user is not found"});
@@ -96,7 +111,8 @@ app.post("/addProduct", async (req, res) => {
         {"$or":[
             {name:{$regex:req.params.key}},
             {category:{$regex:req.params.key}},
-            {brand:{$regex:req.params.key}}
+            {brand:{$regex:req.params.key}},
+            {price:{$regex:req.params.key}}
         ]}
         )
    if(result){

@@ -11,7 +11,7 @@ const SignUp = () => {
     useEffect(()=>{
         const auth = localStorage.getItem("user")
         if(auth){
-            navigate("/")
+            navigate("/products")
         }
 
     },[navigate])
@@ -27,9 +27,11 @@ console.log(name,email,password)
    })
 
    const result = await data.json()
-     localStorage.setItem("user",JSON.stringify(result))
+   console.log(result)
+   localStorage.setItem("user",JSON.stringify(result.result))
+   localStorage.setItem("token",JSON.stringify(result.auth))
    if(result){
-    navigate("/")
+    navigate("/products")
    }
 
     }

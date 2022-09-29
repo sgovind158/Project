@@ -16,7 +16,11 @@ const Products = () => {
   },[data])
 
 const getDataFun = async()=>{
-  let data = await fetch("http://localhost:5000/products")
+  let data = await fetch("http://localhost:5000/products",{
+    headers:{
+      authorization : JSON.parse(localStorage.getItem("token"))
+    }
+  })
   let result = await data.json()
    setData(result)
 }
@@ -36,11 +40,29 @@ const handleDeleteFun = async(id)=>{
   }
   
 }
+
+const handleSearch = async(e)=>{
+let key = e.target.value;
+
+if(key){
+
+  let data = await fetch(`http://localhost:5000/search/${key}`)
+  let result = await data.json()
+  
+  setData(result)
+
+}else{
+  getDataFun()
+}
+
+
+}
 console.log(data)
 
   return (
     <div>
        {/* <h1>products</h1> */}
+       <input  type ="text" placeholder='serch your product' onChange={handleSearch}/>
        <div className={prod.mainDiv}>
        <h1>Id</h1>
         <h1>Name</h1>
@@ -54,7 +76,7 @@ console.log(data)
 
        {/* list div */}
 
-       {data&&data.map((el,index)=>{
+       {data.length>0 ? data.map((el,index)=>{
         return(
           <div className={prod.listDiv} key={el._id}>
            <p>{index + 1}</p>
@@ -67,7 +89,7 @@ console.log(data)
        
         </div>
         )
-       })}
+       }): <h1>Product Not Found</h1>}
        
     </div>
   )
