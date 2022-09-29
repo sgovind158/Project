@@ -1,0 +1,33 @@
+
+
+.mainDiv{
+    width: 80%;
+    height: auto;
+    display: flex;
+    /* border: 1px solid black; */
+    margin: auto    ;
+    justify-content: space-evenly;
+}
+
+.mainDiv>h1{
+    width: 20%;
+    border: 1px solid black;
+     text-align: center;
+}
+
+.listDiv{
+    width: 80%;
+    height: auto;
+    display: flex;
+    /* border: 1px solid black; */
+    margin: auto    ;
+    justify-content: space-evenly;
+    margin-top: -29px;
+}
+
+.listDiv>p{
+    width: 20%;
+    border: 1px solid black;
+     text-align: center;
+     font-family: 20px;
+}
