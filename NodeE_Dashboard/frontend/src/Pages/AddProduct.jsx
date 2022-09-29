@@ -11,17 +11,22 @@ const AddProduct = () => {
 
   const handleAddProductFun = async()=>{
     console.log(name,brand,price,category)
-      //  const  data = await fetch("http://localhost:5000/signup",{
-      //   method:"post",
-      //   body:JSON.stringify({name,email,password}),
-      //   headers:{
-      //       "Content-Type":"application/json"
-      //   }
-      //  })
+     const userId = JSON.parse(localStorage.getItem("user"))._id
+    
+     const data = await fetch("http://localhost:5000/addProduct",{
+      method:"post",
+      body:JSON.stringify({name,brand,price,category,userId}),
+      headers:{
+        "Content-Type":"application/json"
+      }
+     })
+
+     const result = await data.json();
+     console.log(result)
       }
   return (
     <div className={add.addProductDiv}>
-     <h1>Sign Up</h1>
+     <h1>Add Product</h1>
      <input type="text"  placeholder='product name' value={name} onChange={(e)=>setName(e.target.value)}/>
      <input type="text" placeholder='product brand' value={brand} onChange={(e)=>setBrand(e.target.value)}/>
      <input type="text" placeholder='product price' value={price} onChange={(e)=>setPrice(e.target.value)}/>
