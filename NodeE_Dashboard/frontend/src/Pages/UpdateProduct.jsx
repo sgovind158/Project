@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 import update from "./StylePages/update.module.css"
 
 const UpdateProduct = () => {
@@ -7,10 +8,27 @@ const UpdateProduct = () => {
   const [brand ,setBrand] = useState("")
   const [price ,setPrice] = useState("")
   const [category ,setCategory] = useState("")
-  const [err,setErr] = useState(false)
-  const navigate = useNavigate()
+  const {id} = useParams()
+  // const [err,setErr] = useState(false)
+  // const navigate = useNavigate()
 
+   useEffect(()=>{
+  
+    getProductData()
 
+   },[])
+
+  const getProductData = async()=>{
+  
+    let data = await fetch(`http://localhost:5000/product/${id}`)
+       let result = await data.json()
+       let {name,brand,category,price} = result;
+       setName(name)
+       setBrand(brand)
+       setPrice(price)
+       setCategory(category)
+  }
+    
   const handleUpdateFun = ()=>{
     console.log(name,price,category,brand)
 
