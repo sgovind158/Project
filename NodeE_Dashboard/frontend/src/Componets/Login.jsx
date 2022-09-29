@@ -25,7 +25,7 @@ if(auth){
         }
     })
     let result = await data.json();
-   console.log(result,"what is this ")
+//    console.log(result,"what is this ")
      if(result.name){
         localStorage.setItem("user",JSON.stringify(result))
         navigate("/")

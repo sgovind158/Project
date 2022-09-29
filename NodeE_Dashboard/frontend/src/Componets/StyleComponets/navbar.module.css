@@ -16,3 +16,42 @@
     font-size: 1.5rem;
 }
 
+.navDiv >:nth-child(1){
+    width: 119px;
+    height: 61px;
+    border-radius: 183px;
+}
+
+.rightNavDiv{
+    
+    width: 100%;
+    height: 5rem;
+    border: 1px solid black;
+    display: flex ;
+    
+    align-items: center;
+   
+    background-color: skyblue;
+}
+.rightNav{
+    width: 100%;
+    height: 5rem;
+    /* border: 1px solid black; */
+    display: flex ;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 30px;
+    background-color: skyblue;
+}
+
+.rightNav >:nth-child(n){
+    color:  white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.logo{
+    width: 119px;
+    height: 61px;
+    border-radius: 183px;
+}
