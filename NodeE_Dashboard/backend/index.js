@@ -66,5 +66,15 @@ app.post("/addProduct", async (req, res) => {
   
      res.send(result)
   })
+
+  app.get("/product/:id",async(req,res)=>{
+   
+    let result = await productModel.findOne({_id:req.params.id})
+   if(result){
+   res.send(result)
+   }else{
+    res.send({result:"Product not found"})
+   }
+  })
   
 app.listen(5000);
