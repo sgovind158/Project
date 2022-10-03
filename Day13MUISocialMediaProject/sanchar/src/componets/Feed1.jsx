@@ -1,10 +1,25 @@
-import { Box } from '@mui/material'
+// import { ExpandMore } from '@mui/icons-material'
+
+import { Box } from '@mui/material';
 import React from 'react'
+import Post from './Post';
+
+
+
+
 
 const Feed1 = () => {
+ 
+
   return (
-    <Box bgcolor={"red"} flex={4} p={2}>
-      Feed
+    <Box flex={4} p={2}>
+     <Post/>
+     <Post/>
+     <Post/>
+     <Post/>
+     <Post/>
+     <Post/>
+     <Post/>
     </Box>
   )
 }
