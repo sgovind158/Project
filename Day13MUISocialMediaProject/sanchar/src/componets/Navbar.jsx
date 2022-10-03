@@ -65,7 +65,7 @@ const Navbar = () => {
     <AppBar position="sticky">
       <StyledToolbar>
         <Typography  variant='h6' sx={{display:{xs:"none",sm:"block"}}}>
-           LAMA DEV
+          Sanchar App
         </Typography>
         <PetsIcon variant='h6' sx={{display:{xs:"block",sm:"none"}}}>
             </PetsIcon>
@@ -85,7 +85,7 @@ const Navbar = () => {
           </Badge>
           <Avatar
             sx={{ width: 30, height: 30 }}
-            src="https://images.pexels.com/photos/846741/pexels-photo-846741.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src="https://media-exp1.licdn.com/dms/image/C5603AQELgoVZqcbHfQ/profile-displayphoto-shrink_100_100/0/1647699042920?e=1670457600&v=beta&t=sk4FurvheboQBehrGEezrXfLlu4xKG23UMgr7x7k4og"
             // onClick={(e) => setOpen(true)}
           />
         </Icons>

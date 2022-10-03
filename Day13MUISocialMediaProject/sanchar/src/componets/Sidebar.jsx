@@ -8,7 +8,7 @@ import GroupIcon from '@mui/icons-material/Group';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-const Sidebar = () => {
+const Sidebar = ({setMode,mode}) => {
   return (
     <Box
     flex={1} p={2}
@@ -94,7 +94,7 @@ const Sidebar = () => {
               <ListItemIcon>
                <DarkModeIcon/>
               </ListItemIcon>
-              <Switch  />
+              <Switch  onChange = {e=>setMode(mode === "light" ? "dark" : "light")} />
             </ListItemButton>
           </ListItem>
           </List>

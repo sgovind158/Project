@@ -7,29 +7,39 @@ import Feed1 from './componets/Feed1';
 import Navbar from './componets/Navbar';
 import Demo from './componets/Demo';
 
-// const customTheme = createTheme({
-//   palette: {
-//     primary: {
-//       main: 'rgb(0, 0, 0)',
-//       contrastText: 'white',
-//     },
-//   },
-// });
+import Add1 from './componets/Add1';
+import { useState } from 'react';
+
+
 function App() {
+  const [mode,setMode ] =  useState("dark")
+
+
+  const darkTheme = createTheme({
+    palette: {
+      mode:mode
+    },
+  });
   return (
    
-    <Box>
-
+    <ThemeProvider theme={darkTheme}>
+    <Box bgcolor={"background.default"} color = {"text.primary"}>
+  {/* <div position="fixed" > */}
        {/* navbar */}
       <Navbar/>
 
      <Stack  direction="row" justifyContent="space-evenly" spacing={2} >
      
-     <Sidebar/>
+     <Sidebar mode={mode} setMode = {setMode}/>
      <Feed1/>
       <Rightbar/>
+     
      </Stack>
+
+     <Add1/>
+     {/* </div> */}
     </Box>
+    </ThemeProvider>
 
     
   );
