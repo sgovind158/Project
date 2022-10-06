@@ -61,3 +61,45 @@ function bs(arr, target, s, e, value) {
   return value;
 }
 // serch
+
+
+
+
+// Length of Last Word
+// https://leetcode.com/problems/length-of-last-word/
+
+var lengthOfLastWord = function(s) {
+    let sc = 0;
+     let count = 0;
+    let value = 0;
+    let n = s.length ;
+    
+    for(let i = 0; i<n;i++){// T.C O(n)S.C O(1)
+        
+        if(s[i] == " "&&sc==0){
+            value = count ;
+            count = 0;
+            sc++
+        }else{
+            
+            if(s[i] != " "){
+                count++;
+                sc = 0;
+            }
+        }
+    }// loop end 
+    
+    if(count != 0 && sc > 0){
+        return count 
+    }
+    else if(sc == 0){
+        return count
+    }
+    else{
+        return value
+    }
+    
+};
+
+// we are not use any extra space that why S.C O(1)
+// we are loop n time that why T.C O(n)
