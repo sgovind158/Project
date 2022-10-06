@@ -60,3 +60,4 @@ function bs(arr, target, s, e, value) {
   }
   return value;
 }
+// serch
