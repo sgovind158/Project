@@ -30,18 +30,38 @@
 //   --------------------------------------------------//
 // Two pointer tecnic 
 // remove duplicate 
-var removeDuplicate = function (arr, n) {
-    var j = 0;
-    for (var i = 0; i < n; i++) {
-        if (arr[i] != arr[i + 1]) {
-            arr[j++] = arr[i];
+// let removeDuplicate = (arr:number[],n:number):number=>{
+//     let j:number  = 0;
+//     for(let i:number = 0; i<n;i++){
+//         if(arr[i] != arr[i+1]){
+//             arr[j++] = arr[i]
+//         }
+//     }// loop end 
+//     arr[j] = arr[n-1]
+//     return j 
+// }
+// let arr:number[] = [1,2,2,3,3,4,4,4,5,5]
+// let m:number =  removeDuplicate(arr,arr.length)
+// for(let i:number = 0; i<m ;i++){
+//     console.log(arr[i])
+// }
+/// in the worst case our arr run n time that wht T.C O(n)  
+// in the worst case we need extra arr that why our S.C O(n) 
+//arr  best case T.C    [1,2,3,4] T.C.O(n)
+//worst Case T.C     [9,9,9,9] T.C.O(n)
+//   best case S.C      [1,2,3,4] T.C.O(1)
+//  worst Case S.C    [9,9,9,9] T.C.O(1)
+//   --------------------------------------------------//
+var checkPalindrome = function (str, n) {
+    var left = 0;
+    var right = n - 1;
+    while (left < right) {
+        if (str[left++] != str[right--]) {
+            return false;
         }
-    } // loop end 
-    arr[j] = arr[n - 1];
-    return j;
+    }
+    return true;
 };
-var arr = [1, 2, 2, 3, 3, 4, 4, 4, 5, 5];
-var m = removeDuplicate(arr, arr.length);
-for (var i = 0; i < m; i++) {
-    console.log(arr[i]);
-}
+var str = "abcddba";
+var ansBool = checkPalindrome(str, str.length);
+console.log(ansBool == true ? "yes this is palindrome" : "it is not palindrome");
