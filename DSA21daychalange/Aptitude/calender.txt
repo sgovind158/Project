@@ -1,0 +1,38 @@
+Concept 
+
+Sunday = 0;
+Monday = 1
+Tuesday = 2
+Wednesday= 3
+Thursday= 4
+Friday = 5
+Saturday = 6
+
+Cheate Code 
+
+0    3     3     6    1     4    6    2    5   0    3    5
+J    F     M     A    M     J    J    A    S   O    N    D
+
+// Year 
+
+1600-1699 --> 6
+1700-1799 --> 4
+1800-1899 --> 2
+1900-1999 --> 0
+2000-2099 --> 6
+
+//Method 
+
+ Q.1 1 April 2001
+   1 ) 01   -->last 2 digit of year 
+   2 ) 00   --> divide 01 for 4   01/4  like 4)01(0
+   3)  01  --> take date
+   4)  06  --> Month Code 
+   5)   06  --> Year Code 
+   6)   ---    --> sum all number
+   6)    14    
+   7)  7)14(2    
+         14
+         ---
+         0--> remainder is ans 
+         Ans 0--> Sunday  

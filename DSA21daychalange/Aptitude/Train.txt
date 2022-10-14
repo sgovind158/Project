@@ -1,0 +1,112 @@
+1. Distance Formula
+
+speed = distance /  time
+
+-----------------------------------------*************---------------------------------------
+
+
+
+2. Conversion rule 
+
+Q How much distance a car covers with speed 60kmph in 30 seconds?
+Ans distance = ?
+    time = 30 seconds
+    speed = 60 kmph
+
+    first step convert kmph to m/s 
+    x * 1000/60 * 60  = 10/36 = 5/18
+    x*5/18
+    speed = 60 * 5/18 = 50/3 m/S
+
+    step 2 distance Formula 
+    distance = speed * time 
+    distance = 50/3 * 30   = 500 meter 
+    
+    Ans distance = 500 meter
+
+// m/s --> kmph
+50/3 * 18/5  ---> 300 / 5 = 60kmph
+
+-----------------------------------------*************---------------------------------------
+
+
+
+
+3 Relativity
+
+1train------->           <---------2train
+speed 50kmph               speed 80kmph
+
+1TrainSpeed + 2TrainSpeed 
+ 
+ 50 + 80 = 130kmph
+
+
+-----------------------------------------*************---------------------------------------
+
+
+
+ 4  Relativity 2 nd low 
+
+ 1train------->         
+speed 50kmph  
+
+ 2train------->         
+speed 50kmph  
+
+ 2TrainSpeed  - 1TrainSpeed
+ 
+ 80 - 50 = 30kmph
+
+-----------------------------------------*************---------------------------------------
+
+ 5 Train Theroy 
+
+ Train------------>
+ ------------------  |------------------
+      length         |  junction  f --> junctionLength
+
+distance = length + f 
+
+
+-----------------------------------------*************---------------------------------------
+
+
+
+6  
+
+1Train------------>           <---------2train
+ ------------------         |------------------
+      1TrainSpeed = ukmph       |  2TrainSpeed = vkmph
+
+speed = distance / time 
+
+time = distance/speed 
+
+time =  1Train + 2train 
+        ---------------
+          u + v
+
+
+-----------------------------------------*************---------------------------------------
+
+
+ 1train------->         
+
+
+ 2train------->         
+  
+time =  1Train + 2train 
+        ---------------
+          u - v
+
+
+
+
+Q.1 A car covers 120 km in 2 hours find speed?
+Ans   distance = 120 km 
+      time = 2  hours;
+      speed = ?
+      speed = 120 / 2  = 60 kmph 
+      Ans 60 kmph
+
